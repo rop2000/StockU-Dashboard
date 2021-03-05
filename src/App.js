@@ -11,11 +11,39 @@ import {
 } from '@chakra-ui/react';
 import { ColorModeSwitcher } from './ColorModeSwitcher';
 import { Logo } from './Logo';
+import Header from './components/Navbar/Navbar.js'
+import Tickers from './components/Tickers/Tickers.js'
+import StockHolding from './components/StockHolding/StockHolding.js'
+import StockList from './components/StockList/StockList.js'
+import Dashboard from './components/Dashboard/Dashboard.js'
+import StockChart from './components/StockGraph/StockGraph.js'
+
 
 function App() {
   return (
+    
     <ChakraProvider theme={theme}>
-      <Box textAlign="center" fontSize="xl">
+     <Header/>
+    <Tickers/>
+   <Dashboard></Dashboard>
+   {/* <StockChart numPoints={30}></StockChart> */}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      {/* <Box textAlign="center" fontSize="xl">
         <Grid minH="100vh" p={3}>
           <ColorModeSwitcher justifySelf="flex-end" />
           <VStack spacing={8}>
@@ -34,7 +62,7 @@ function App() {
             </Link>
           </VStack>
         </Grid>
-      </Box>
+      </Box> */}
     </ChakraProvider>
   );
 }
