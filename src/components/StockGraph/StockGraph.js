@@ -7,7 +7,7 @@ import {
   import {
 
     Box,
-   
+    Button,
   } from '@chakra-ui/react';
 
 
@@ -127,7 +127,7 @@ useEffect(() => {
       </LineChart> */}
 
       {/* </ResponsiveContainer> */}
-      <button className="button is-warning is-inverted" onClick={() => webSocket.current.close()}>Toggle Live Feed</button>
+      <Button onClick={() => webSocket.current.close()}>Toggle Live Feed</Button>
         </Box>
     );
   

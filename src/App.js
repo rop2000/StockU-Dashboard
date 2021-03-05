@@ -17,7 +17,7 @@ import StockHolding from './components/StockHolding/StockHolding.js'
 import StockList from './components/StockList/StockList.js'
 import Dashboard from './components/Dashboard/Dashboard.js'
 import StockChart from './components/StockGraph/StockGraph.js'
-
+import AlgoObj from './components/AlgoObj/AlgoObj.js'
 
 function App() {
   return (
@@ -26,6 +26,7 @@ function App() {
      <Header/>
     <Tickers/>
    <Dashboard></Dashboard>
+   <AlgoObj algoName="Algo1"></AlgoObj>
    {/* <StockChart numPoints={30}></StockChart> */}
 
 
