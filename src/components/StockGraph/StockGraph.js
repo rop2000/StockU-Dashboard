@@ -8,6 +8,8 @@ import {
 
     Box,
     Button,
+    Flex,
+    HStack,
   } from '@chakra-ui/react';
 
 
@@ -50,11 +52,7 @@ useEffect(() => {
                 // setDataCounter(dataCounter + 1)
                 setData(currentData => [...currentData, createDataPoint(res.data[0].t,res.data[0].p)])
             // console.log(data)
-                
             }
-
-           
-       
     }
     return () => webSocket.current.close();
 }, [])
@@ -127,7 +125,15 @@ useEffect(() => {
       </LineChart> */}
 
       {/* </ResponsiveContainer> */}
+      <HStack ml="5rem" direction="rows" spacing={4} align="center">
       <Button onClick={() => webSocket.current.close()}>Toggle Live Feed</Button>
+      <Button>1D</Button>
+      <Button>5D</Button>
+      <Button>1M</Button>
+      <Button>6M</Button>
+      <Button>1Y</Button>
+      <Button>ALL</Button>
+      </HStack>
         </Box>
     );
   

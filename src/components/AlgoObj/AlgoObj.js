@@ -101,7 +101,7 @@ function AlgoObj(props) {
 
     <Box as="div">
     <HStack spacing={-5}>
-    <Text fontSize="md" pr="10" >Volume: {props.volume ? props.volume : "--"}</Text>   
+    <Text fontSize="md" pr="10" >Shares: {props.algoShares ? props.algoShares : "None"}</Text>   
     <Popover>
             <PopoverTrigger>
             <Tag size="xs" variant="subtle" borderRadius="full" colorScheme="cyan">&nbsp;?&nbsp;</Tag>
@@ -109,15 +109,15 @@ function AlgoObj(props) {
             <PopoverContent>
               <PopoverArrow />
               <PopoverCloseButton />
-              <PopoverHeader>Volume</PopoverHeader>
-              <PopoverBody>This is the price the stock you searched for last opened at! You can use this adjust when you want your algo to buy shares.</PopoverBody>
+              <PopoverHeader>Current Share Amount</PopoverHeader>
+              <PopoverBody>Depending on how your algorithm works, this value can change frequently during the day! This is the current number of shares the algo has invested into.</PopoverBody>
             </PopoverContent>
         </Popover>
    
     </HStack>
 
     <HStack mt={25} spacing={-5}>
-    <Text fontSize="md" pr="10" >Change: {props.numChange && props.percChange ? props.numChange+"/"+props.percChange : "--" }</Text>
+    <Text fontSize="md" pr="10" >Profit: {props.algoProfit ? props.algoProfit : "$0" }</Text>
 
         <Popover>
             <PopoverTrigger>
@@ -126,8 +126,8 @@ function AlgoObj(props) {
             <PopoverContent>
               <PopoverArrow />
               <PopoverCloseButton />
-              <PopoverHeader>Change #/%: {props.numChange && props.percChange ? props.numChange+"/"+props.percChange : "--" }</PopoverHeader>
-              <PopoverBody>This is the price the stock you searched for last closed at! You can use this adjust when you want to sell your algo.</PopoverBody>
+              <PopoverHeader> Year To Date(YTD) Profit</PopoverHeader>
+              <PopoverBody>This is how much profit your algorithm has made since you created it! If this is negative for a long period of time, you may want to try a different setup.</PopoverBody>
             </PopoverContent>
         </Popover>
 

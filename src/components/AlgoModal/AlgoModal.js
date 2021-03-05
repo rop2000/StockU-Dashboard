@@ -27,7 +27,7 @@ function AlgoModal(props) {
         <Button colorScheme="blue" mr={3} onClick={props.onClose}>
           Close
         </Button>
-        <Button variant="ghost">Secondary Action</Button>
+        <Button variant="ghost">Edit Algo</Button>
       </ModalFooter>
     </ModalContent>
   </Modal>
